@@ -21,10 +21,6 @@ const navItems = {
 </script>
 
 <style lang="scss" scoped>
-* {
-    all: initial;
-}
-
 .nav-container {
     position: sticky;
     bottom: 0;

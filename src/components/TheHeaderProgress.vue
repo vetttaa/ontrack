@@ -2,7 +2,7 @@
     <a href="#">
         <div class="header-status-container">
             Day complete
-            <CheckCircleIcon class="icon-complete" />
+            <CheckCircleIcon class="icon-complete" style="color: green" />
         </div>
 
         <div class="header-status-container">
@@ -22,17 +22,16 @@ import { CheckCircleIcon } from "@heroicons/vue/24/solid";
     align-items: center;
     gap: 1px;
     font-size: 1em;
+}
 
-    .icon-complete {
-        height: 1.5em;
-        color: green;
-    }
+.icon-complete {
+    height: 1.5em;
+}
 
-    .circle-progress {
-        width: 1.2em;
-        height: 1.2em;
-        background-color: orange;
-        border-radius: 50%;
-    }
+.circle-progress {
+    width: 1.2em;
+    height: 1.2em;
+    background-color: orange;
+    border-radius: 50%;
 }
 </style>

@@ -6,16 +6,12 @@
 </template>
 
 <script setup>
-import TheLogo from "./TheLogo.vue";
-import TheHeaderProgress from "./TheHeaderProgress.vue";
+import TheLogo from "@/components/TheLogo.vue";
+import TheHeaderProgress from "@/components/TheHeaderProgress.vue";
 
 </script>
 
 <style lang="scss" scoped>
-* {
-    all: initial;
-}
-
 .header-container {
     position: sticky;
     top: 0;
