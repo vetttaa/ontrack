@@ -1,5 +1,5 @@
 <template>
-    <a href="#">
+    <a href="`#${PAGE_PROGRESS}`">
         <div class="header-status-container">
             Day complete
             <CheckCircleIcon class="icon-complete" style="color: green" />
@@ -14,6 +14,7 @@
 
 <script setup>
 import { CheckCircleIcon } from "@heroicons/vue/24/solid";
+import { PAGE_PROGRESS } from "@/constants";
 </script>
 
 <style lang="scss" scoped>

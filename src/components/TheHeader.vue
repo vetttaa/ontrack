@@ -1,7 +1,7 @@
 <template>
     <header class="header-container">
-        <TheLogo />
-        <TheHeaderProgress />
+        <TheLogo @click="emit('goToTimeline')" />
+        <TheHeaderProgress @click="emit('goToProgress')" />
     </header>
 </template>
 
@@ -9,6 +9,7 @@
 import TheLogo from "@/components/TheLogo.vue";
 import TheHeaderProgress from "@/components/TheHeaderProgress.vue";
 
+const emit = defineEmits(['goToTimeline', 'goToProgress'])
 </script>
 
 <style lang="scss" scoped>
