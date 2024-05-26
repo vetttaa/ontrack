@@ -10,7 +10,12 @@
 <script setup>
 import TimeLineItem from "@/components/TimeLineItem.vue";
 
-defineProps(['timeLineItems'])
+defineProps({
+    timeLineItems: {
+        required: true,
+        type: Array
+    }
+})
 </script>
 
 <style lang="scss" scoped></style>

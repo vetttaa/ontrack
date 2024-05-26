@@ -8,7 +8,12 @@
 <script setup>
 import BaseSelect from "@/components/BaseSelect.vue";
 
-defineProps(['timelineItem'])
+defineProps({
+    timelineItem: {
+        required: true,
+        type: Object
+    }
+})
 const selectActivityId = 1
 
 const options = [
