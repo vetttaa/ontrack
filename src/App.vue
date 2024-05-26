@@ -1,7 +1,7 @@
 <template>
   <TheHeader @go-to-timeline="goTo(PAGE_TIMELINE)" @go-to-progress="goTo(PAGE_PROGRESS)" />
   <main class="main-container">
-    <TheTimeline v-show="currentPage === PAGE_TIMELINE" />
+    <TheTimeline v-show="currentPage === PAGE_TIMELINE" :time-line-items="timeLineItems" />
     <TheActivities v-show="currentPage === PAGE_ACTIVITIES" />
     <TheProgress v-show="currentPage === PAGE_PROGRESS" />
   </main>
@@ -15,19 +15,22 @@ import TheTimeline from "@/pages/TheTimeline.vue";
 import TheActivities from "@/pages/TheActivities.vue";
 import TheProgress from "@/pages/TheProgress.vue";
 import { PAGE_TIMELINE, PAGE_ACTIVITIES, PAGE_PROGRESS } from "@/constants";
-
-import { normalizePageHash } from "@/functions";
-
+import { normalizePageHash, generationTimelineItems } from "@/functions";
 import { ref } from "vue";
 
-const currentPage = ref(normalizePageHash());
 
+const currentPage = ref(normalizePageHash());
 
 function goTo(page) {
   currentPage.value = page;
 }
 
+const timeLineItems = generationTimelineItems()
+
+
 </script>
+
+
 
 <style lang="scss" scoped>
 * {
