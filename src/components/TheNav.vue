@@ -1,7 +1,7 @@
 <template>
     <nav class="nav-container">
         <ul>
-            <NavItem v-for="(icon, page) in navItems" :key="page" :href="`#${page}`"
+            <NavItem v-for="(icon, page) in NAV_ITEMS" :key="page" :href="`#${page}`"
                 :class="{ 'active': page === currentPage }" @click="emit('navigate', page)">
                 <component :is="icon" class="nav-icon" />{{ page }}
             </NavItem>
@@ -10,19 +10,12 @@
 </template>
 
 <script setup>
-import { ClockIcon, ListBulletIcon, ChartBarIcon } from "@heroicons/vue/24/outline";
-import { PAGE_TIMELINE, PAGE_ACTIVITIES, PAGE_PROGRESS } from "@/constants";
+import { NAV_ITEMS } from "@/constants";
 import NavItem from "@/components/NavItem.vue";
 
 defineProps(['currentPage']);
 
 const emit = defineEmits(['navigate'])
-
-const navItems = {
-    [PAGE_TIMELINE]: ClockIcon,
-    [PAGE_ACTIVITIES]: ListBulletIcon,
-    [PAGE_PROGRESS]: ChartBarIcon
-};
 
 </script>
 

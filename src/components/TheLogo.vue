@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { PAGE_TIMELINE } from '@/constants';
 
 </script>
 
